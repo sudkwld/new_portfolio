@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "suit-regular";
+  font-weight: 400;
+  src: local(☺),
+  url('../font/SUIT-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "suit-extrabold";
+  font-weight: 900;
+  src: local(☺),
+  url('../font/SUIT-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "suit-semibold";
+  font-weight: 700;
+  src: local(☺),
+  url('../font/SUIT-SemiBold.ttf') format('truetype');
+}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+#plugin_bg_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#starchart{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  animation-name: coriolis;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: 0;
+}
+#fibonaccis{
+  position: relative;
+  transform: scalex(-1);
+  top: 15%;
+  right: 7.5%;
+}
+#ursaminor{
+  position:relative;
+  transform: rotate(70deg);
+  top: 30%;
+}
+#scattergrid{
+  display: grid;
+  position: fixed;
+  top: auto;
+  left: 15%;
+  grid-template: repeat(50, auto) / repeat(40, auto);
+}
+.stars{
+  position: relative;
+  width: 6px;
+  height: 6px;
+  background-color: #FFFFCC;
+  border-radius: 50%;
+  margin: 10px;
+  animation-name: twinkle;
+  animation-duration: 1.5s;
+  animation-iteration-count:infinite;
+}
+.sgstar{
+  width: 3px;
+  height: 3px;
+  background-color: #FFFFCC;
+  border-radius: 50%;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  animation-name: twinkle;
+  animation-duration: 0.9s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes twinkle{
+  35%{
+    transform: scale(0.5);
+  }
+  90%{
+    transform: scale(1);
+  }
+}
+@keyframes coriolis{
+  30%{
+    transform: rotate(90deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  80%{
+    transform: rotate(270deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#fib0{
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  margin: 1px 1% 0px;
+}
+#fib1{
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  margin: 1px 1% 0px;
+}
+#fib2{
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  margin: 2px 2% 0px;
+}
+#fib3{
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  margin: 3px 3% 0px;
+}
+#fib4{
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  margin: 5px 5% 0px;
+}
+#fib5{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 8px 8% 0px;
+}
+#fib6{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 13px 13% 0px;
+}
+#fib7{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 21px 21% 0px;
+}
+#fib8{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 34px 34% 0px;
+}
+#fib9{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 55px 55% 0px;
+}
+#fib10{
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  margin: 89px 89% 0px;
+}
+#umi0{
+  transform: scale(1.2);
+  animation-timing-function: linear;
+}
+#umi1{
+  margin: 30px 10% 15px; 
+}
+#umi2{
+  margin: 15px 17% 0px; 
+}
+#umi3{
+  margin: 2.5px 27% 0px; 
+}
+#umi4{
+  margin: 65px 27.5% 0px; 
+}
+#umi5{
+  margin: -15px 45%; 
+}
+#umi6{
+  margin: -85px 43%; 
+}
+
+.word {
+  color: white;
+  font: 700 normal 3em 'tahoma';
+  text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+    position:absolute;
+    top:15%;
+    left:50%;
+    transform:translateX(-50%);
+    width:1000px; 
+    height:60px;
+    line-height:60px;
+    text-align:center;
+}
+
+#subtitle {
+    width:700px;
+    height:120px;
+    position:absolute;
+    top:10%;
+    left:2%;
+    transform:translateX(-50%);
+    text-align:center;
+}
+
+#subtitle > div {
+    width:100%; 
+    height:120px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+#subtitle > div > i {
+    position:relative;
+    font-size:18px;
+    color:#000;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    background-color:#ccc;
+    border-radius:50%;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+
+#subtitle > div > i > span {
+    position:absolute;
+    color:#fff;
+    font-size:12px;
+    width:150px;
+    height:20px;
+    line-height:20px;
+    background-color:#353f67;;
+    border-radius:10px;
+    top:10px;
+    left:110%;
+    display:none;
+}
+
+#subtitle p {
+  color: #fff;
+}
